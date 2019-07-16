@@ -22,7 +22,10 @@
             </div>
 
             <div class="team-back">
-              <ul>
+              <div>
+                <i (click)="editUser(user);" class="fa fa-edit pull-right"></i>
+              </div>
+              <ul class="mt-4">
                 <li>First Name: <b>{{user.firstName}}</b></li>
                 <li>Last Name: <b>{{user.lastName}}</b></li>
                 <li>email Address: <b>{{user.email}}</b></li>

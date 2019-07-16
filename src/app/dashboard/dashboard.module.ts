@@ -6,9 +6,11 @@ import { DashboardRoutingModule } from './dashboard-routing';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from '../shared/shared.module';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 
 @NgModule({
-    declarations: [DashboardComponent],
+    declarations: [DashboardComponent, EditUserComponent],
     imports: [
         CommonModule,
         SharedModule,
@@ -16,7 +18,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
         ReactiveFormsModule,
         NgbModule,
         AngularFontAwesomeModule,
-        DashboardRoutingModule
+        DashboardRoutingModule,
+        TranslateModule
     ],
     exports: []
 })

@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,9 +13,10 @@ export class DashboardComponent implements OnInit {
   userRecords: any [];
   url: any;
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit() {
+    localStorage.removeItem('edit-user');
     this.url = 'https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg';
     this.userRecords = JSON.parse(localStorage.getItem('user-records'));
     if (!(this.userRecords instanceof Array)) {
@@ -28,7 +30,7 @@ export class DashboardComponent implements OnInit {
       if (this.profileInfo.userName === 'Admin') {
         const userName = {firstName: 'Anonymous', lastName: 'Anonymous', email: 'anonymous@gmail.com'};
         this.userAdmin = true;
-        this.userRecords.push(userName);
+        this.userRecords.push({index: (this.userRecords.length + 1), ...userName});
       }
     }
   }
@@ -57,5 +59,10 @@ export class DashboardComponent implements OnInit {
         }
       };
     }
+  }
+
+  editUser(user: any) {
+    localStorage.setItem('edit-user', JSON.stringify(user));
+    this._router.navigateByUrl('/dashboard/edit-user');
   }
 }

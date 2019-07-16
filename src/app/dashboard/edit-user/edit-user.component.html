@@ -1,0 +1,45 @@
+<section id="provision">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3 class="text-align-center text-info-custom pt-5">Edit User</h3>
+                <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group position-relative">
+                        <label class="text-info-custom">{{'Firstname' | translate}}</label>
+                        <input type="text" formControlName="firstName" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <app-field-error-display [controlErrors]="f.firstName.errors"
+                            [displayError]="submitted && f.firstName.errors"
+                            [errorMsg]="{'required': 'Errors-Registration.Firstnamerequired'}">
+                        </app-field-error-display>
+                    </div>
+                    <div class="form-group position-relative">
+                        <label class="text-info-custom">{{'Lastname' | translate}}</label>
+                        <input type="text" formControlName="lastName" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                        <app-field-error-display [controlErrors]="f.lastName.errors"
+                            [displayError]="submitted && f.lastName.errors"
+                            [errorMsg]="{'required': 'Errors-Registration.Lastnamerequired'}">
+                        </app-field-error-display>
+                    </div>
+
+                    <div class="form-group position-relative">
+                            <label class="text-info-custom">{{'Email' | translate}}</label>
+                            <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                            <app-field-error-display  [controlErrors]="f.email.errors" [displayError]="submitted && f.email.errors" [errorMsg]="{'required': 'Errors-Registration.Emailrequired', 'email': 'Errors-Registration.Emailvalid'}">
+                              </app-field-error-display>
+                        </div>
+
+                    <div class="form-group">
+                            <button class="btn btn-primary btn-custom">Save</button>
+                        </div>
+  
+                        <div id="register-link" class="text-right">
+                            <a [routerLink]="['/dashboard']" class="text-info-custom">Back To Dashboard</a>
+                        </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
