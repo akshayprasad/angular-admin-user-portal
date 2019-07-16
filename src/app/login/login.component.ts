@@ -25,7 +25,7 @@ export class LoginComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._sharedService.signalEvent.emit({signOutEnable: false});
+    // this._sharedService.signalEvent.emit({signOutEnable: false});
     this.isLoggedIn$ = this.authService.isLoggedIn;
     this.isLoggedIn$.subscribe(loggedIn => {
       if (loggedIn) {

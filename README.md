@@ -5,16 +5,29 @@ This project was generated with Angular version 6.1.2.
 ## Pages View:
 
 <br/><br/>
-![Alt text](src/assets/images/login.png?raw=true,"View")
+![Alt text](src/assets/images/login-screen.png?raw=true,"View")
 
 <br/><br/>
 ![Alt text](src/assets/images/registration.png?raw=true,"View")
 
+<br/><br/>
 ![Alt text](src/assets/images/registration-error.png?raw=true,"View")
 
-## Test cases View:
+<br/> <br/>
+![Alt text](src/assets/images/admin.png?raw=true,"View")
 
-![Alt text](src/assets/images/test-case.png?raw=true,"View")
+<br/> <br/>
+![Alt text](src/assets/images/admin.png?raw=true,"View")
+
+<br/><br/>
+![Alt text](src/assets/images/end-user.png?raw=true,"View")
+
+## Admin Credentials
+
+``js
+    username: admin@gmail.com
+    password: Admin@123
+``
 
 ## Development server
 

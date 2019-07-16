@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { NotFoundComponent } from './shared';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { RoleGuardService } from './guards/role-guard.service';
+import { AuthGuard } from './core/shared/auth/auth.guard';
+
 const routes: Routes = [
     {
         path: '',
@@ -19,7 +20,8 @@ const routes: Routes = [
             },
             {
                 path: 'dashboard',
-                loadChildren: './dashboard/dashboard.module#DashboardModule'
+                loadChildren: './dashboard/dashboard.module#DashboardModule',
+                canActivate: [AuthGuard]
             }
         ]
     },
@@ -42,8 +44,7 @@ const routes: Routes = [
         RouterModule.forRoot(routes, { enableTracing: true })
     ],
 
-    exports: [RouterModule],
-    providers: [RoleGuardService]
+    exports: [RouterModule]
 })
 
 export class AppRoutingModule {}
