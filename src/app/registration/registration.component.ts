@@ -43,7 +43,10 @@ export class RegistrationComponent extends BaseComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    const records = JSON.parse(localStorage.getItem('user-records')) || [];
+    let records = JSON.parse(localStorage.getItem('user-records')) || [];
+    if (!(records instanceof Array)) {
+      records = [records];
+    }
 
     // stop here if form is invalid
     if (this.registerForm.invalid) {
