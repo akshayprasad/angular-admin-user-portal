@@ -24,10 +24,10 @@ This project was generated with Angular version 6.1.2.
 
 ## Admin Credentials
 
-``
-    username: <b>admin@gmail.com</b> <br/>
-    password: <b>Admin@123</b>
-``
+<ul>
+    <li>username: <b>admin@gmail.com</b> <br/></li>
+    <li>password: <b>Admin@123</b></li>
+</ul>
 
 ## Development server
 
