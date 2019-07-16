@@ -49,13 +49,13 @@ export class DashboardComponent implements OnInit {
         localStorage.setItem('profile-info', JSON.stringify(profileInfo));
         if (this.profileInfo.userName !== 'Admin') {
           this.userRecords.every((user: any) => {
-            if ((user.firstName + ' ' + user.lastName) === this.profileInfo.userName) {
+            if ((user.index) === this.profileInfo.index) {
               user.imgUrl = this.url;
               return false;
             }
             return true;
           });
-          localStorage.setItem('user-records', JSON.stringify(this.profileInfo));
+          localStorage.setItem('user-records', JSON.stringify(this.userRecords));
         }
       };
     }
