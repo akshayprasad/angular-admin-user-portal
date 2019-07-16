@@ -22,7 +22,7 @@
             </div>
 
             <div class="team-back">
-              <div>
+              <div *ngIf="user.firstName !== 'Anonymous'">
                 <i (click)="editUser(user);" class="fa fa-edit pull-right"></i>
               </div>
               <ul class="mt-4">
