@@ -24,7 +24,7 @@ This project was generated with Angular version 6.1.2.
 
 ## Admin Credentials
 
-``js
+``
     username: admin@gmail.com
     password: Admin@123
 ``
