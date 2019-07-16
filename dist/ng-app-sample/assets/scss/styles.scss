@@ -1,0 +1,11 @@
+@import 'variables';
+
+.header {
+    height: $header-height;
+    background: $cwt-theme-color;
+
+    .header-pane {
+        width: 100%;
+        box-sizing: content-box;
+    }
+}

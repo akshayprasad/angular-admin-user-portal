@@ -1,0 +1,178 @@
+  // Custom tooltip error
+  @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+  .validate {
+    position: relative;
+}
+
+.validate input {
+    border: 1px solid #fa0000;
+}
+
+.error-tooltip-wrap {
+    // opacity: 0;
+    // bottom: 65%;
+    top: -10%;
+    margin-bottom: -5px;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    transform: translateZ(0);
+    &:before{
+        opacity: 1;
+    }
+    &:after{
+        opacity: 0;
+    }
+}
+
+.validate .error-tooltip {
+    background: #fa0000;
+
+    .hideContent{
+        display: block !important;
+    }
+}
+
+.error-tooltip-wrap .error-tooltip {
+    display: inline-block;
+    background: transparent;
+    padding: 5px 12px;
+    color: #fff;
+    border-radius: 3px;
+    bottom: 0;
+    margin-bottom: 11px;
+    transform: translate(0);
+    transform-origin: top;
+}
+
+.validate .error-tooltip {
+    background: #fa0000;
+    &:before{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #fa0000 transparent transparent transparent;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #fa0000 transparent transparent transparent;
+    }
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+
+.our-team-main
+{
+	width:100%;
+	height:auto;
+	border-bottom:5px #323233 solid;
+	background:#fff;
+	text-align:center;
+	border-radius:10px;
+	overflow:hidden;
+	position:relative;
+	transition:0.5s;
+	margin-bottom:28px;
+}
+
+
+.our-team-main img
+{
+	border-radius:50%;
+	margin-bottom:20px;
+	width: 90px;
+}
+
+.our-team-main h3
+{
+	font-size:20px;
+	font-weight:700;
+}
+
+.our-team-main p
+{
+	margin-bottom:0;
+}
+
+.team-back
+{
+	width:100%;
+	height:auto;
+	position:absolute;
+	top:0;
+	left:0;
+	padding:5px 15px 0 15px;
+	text-align:left;
+	background:#fff;
+	
+}
+
+.team-front
+{
+	width:100%;
+	height:auto;
+	position:relative;
+	z-index:10;
+	background:#fff;
+	padding:15px;
+	bottom:0px;
+	transition: all 0.5s ease;
+}
+
+.our-team-main:hover .team-front
+{
+	bottom:-200px;
+	transition: all 0.5s ease;
+}
+
+.our-team-main:hover
+{
+	border-color:#777;
+	transition:0.5s;
+}
+
+/*our-team-main*/
+
+/* End user */
+
+#user{
+  margin-top: 30px;
+}
+
+.card-header {
+  background-color: #005173;
+
+  h4 {
+    color: #fff;
+  }
+}
+
+input.hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+#profile-image1 {
+  cursor: pointer;
+
+   width: 100px;
+  height: 100px;
+border:2px solid #03b1ce ;}
+.tital{ font-size:16px; font-weight:500;}
+ .bot-border{ border-bottom:1px #f8f8f8 solid;  margin:5px 0  5px 0}	

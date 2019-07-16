@@ -1,0 +1,126 @@
+<section id="provision">
+  <div class="container">
+
+    <div *ngIf="userAdmin" id="admin">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="text-align-center mt-5">Welcome <b>{{profileInfo?.userName}}</b> to Bits and Bytes</h3>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+
+        <!--team-1-->
+        <div class="col-lg-4" *ngFor="let user of userRecords">
+          <div class="our-team-main">
+
+            <div class="team-front">
+              <img src="http://placehold.it/110x110/9c27b0/fff?text={{user.firstName}}" class="img-fluid" />
+              <h3>{{user.firstName}} {{user.lastName}}</h3>
+              <p>Fullstack Developer</p>
+            </div>
+
+            <div class="team-back">
+              <ul>
+                <li>First Name: <b>{{user.firstName}}</b></li>
+                <li>Last Name: <b>{{user.lastName}}</b></li>
+                <li>email Address: <b>{{user.email}}</b></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <!--team-1-->
+
+
+
+      </div>
+    </div>
+
+    <div *ngIf="!userAdmin" id="user">
+
+        <div class="row">
+            <div class="col-lg-12">
+              <h3 class="text-align-center mt-3">Welcome <b>{{profileInfo?.userName}}</b> to Bits and Bytes</h3>
+            </div>
+        </div>
+
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+
+          <div class="card mt-3">
+            <div class="card-header">
+              <h4 class="text-align-center">User Profile</h4>
+            </div>
+            <div class="card-block">
+
+              <div class="box box-info">
+
+                <div class="box-body">
+                  <div class="col-sm-12">
+                    <div class="text-align-center mt-5"> <img alt="User Pic"
+                        [src]="url" (click)="uploader.click();"
+                        id="profile-image1" class="img-circle img-responsive">
+
+                      <input id="profile-image-upload" type="file" class="hidden"  #uploader (change)="onSelectFile($event)">
+                      <div style="color:#999;">click here to change profile image</div>
+                      <!--Upload Image Js And Css-->
+
+
+
+
+
+
+
+                    </div>
+
+                    <br>
+
+                    <!-- /input-group -->
+                  </div>
+                  <div class="col-sm-6">
+                    <h4 style="color:#005173;">{{profileInfo?.firstName}} {{profileInfo?.lastName}}</h4>
+                  </div>
+                  <div class="clearfix"></div>
+                  <hr style="margin:5px 0 5px 0;">
+
+
+                  <div class="col-sm-5 col-xs-6 tital ">First Name:</div>
+                  <div class="col-sm-7 col-xs-6 ">{{profileInfo?.firstName}}</div>
+                  <div class="clearfix"></div>
+                  <div class="bot-border"></div>
+
+
+                  <div class="col-sm-5 col-xs-6 tital ">Last Name:</div>
+                  <div class="col-sm-7"> {{profileInfo?.lastName}}</div>
+                  <div class="clearfix"></div>
+                  <div class="bot-border"></div>
+
+          
+
+                  <div class="col-sm-5 col-xs-6 tital ">Email Address:</div>
+                  <div class="col-sm-7">{{profileInfo?.email}}</div>
+
+                  <div class="clearfix"></div>
+                  <div class="bot-border"></div>
+
+                  <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+
+              </div>
+
+
+            </div>
+          </div>
+        
+        
+        
+          <div class="col-lg-2"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+</section>

@@ -1,0 +1,39 @@
+<section>
+    <div id="login" class="pt-5">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                            <h3 class="text-center text-info-custom-custom">{{'LoginuserAdmin' | translate}}</h3>
+                            <div class="form-group position-relative">
+                                <label for="username" class="text-info-custom">{{'Email' | translate}}:</label><br>
+                                <input type="text" name="email" id="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                                <app-field-error-display  [controlErrors]="f.email.errors" [displayError]="submitted && f.email.errors" [errorMsg]="{'required': 'Errors-Login.Emailrequired', 'email': 'Errors-Login.Emailvalid'}">
+                                  </app-field-error-display>
+                            </div>
+                            <div class="form-group position-relative">
+                                <label for="password" class="text-info-custom">{{'Password' | translate}}:</label><br>
+                                <input type="password" name="password" id="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                                <app-field-error-display  [controlErrors]="f.password.errors" [displayError]="submitted && f.password.errors" [errorMsg]="{'required': 'Errors-Login.Passwordrequired', 'minlength': 'Errors-Login.Passwordminlength'}">
+                                  </app-field-error-display>
+                            </div>
+
+                            <div class="form-group position-relative alert alert-danger" *ngIf="invalidCredentials" #alerterror>
+                                <span>Invalid Credentials <i class="fa fa-thumbs-down"></i></span>
+                            </div>
+                            <div class="form-group pt-2">
+                                <!-- <label for="remember-me" class="text-info-custom"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br> -->
+                                <input type="submit" name="submit" class="btn btn-info btn-md btn-custom" value="{{'Submit' | translate}}">
+                            </div>
+                            <div id="register-link" class="text-right">
+                                <a [routerLink]="['/registration']" class="text-info-custom">{{'Registerhere' | translate}}</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- #005173 -->
