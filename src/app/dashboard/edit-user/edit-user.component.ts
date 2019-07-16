@@ -47,6 +47,7 @@ export class EditUserComponent extends BaseComponent implements OnInit {
             if (user.index === this.userInfo.index) {
                 user.firstName = this.userForm.value.firstName;
                 user.lastName = this.userForm.value.lastName;
+                user.email = this.userForm.value.email;
                 return false;
             }
             return true;
