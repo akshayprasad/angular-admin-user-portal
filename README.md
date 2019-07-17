@@ -14,9 +14,6 @@ This project was generated with Angular version 6.1.2.
 ![Alt text](src/assets/images/registration-error.png?raw=true,"View")
 
 <br/> <br/>
-![Alt text](src/assets/images/admin.png?raw=true,"View")
-
-<br/> <br/>
 ![Alt text](src/assets/images/admin-portal.png?raw=true,"View")
 
 <br/><br/>
