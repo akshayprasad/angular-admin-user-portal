@@ -12,26 +12,28 @@
 
         <!--team-1-->
         <div class="col-lg-4" *ngFor="let user of userRecords">
-          <div class="our-team-main">
+          <div  *ngIf="user?.firstName">
+            <div class="our-team-main">
 
-            <div class="team-front">
-                <!-- 9c27b0 -->
-              <img src="http://placehold.it/110x110/005173/fff?text={{user.firstName}}" class="img-fluid" />
-              <h3>{{user.firstName}} {{user.lastName}}</h3>
-              <p>Fullstack Developer</p>
-            </div>
-
-            <div class="team-back">
-              <div *ngIf="user.firstName !== 'Anonymous'">
-                <i (click)="editUser(user);" class="fa fa-edit pull-right"></i>
+              <div class="team-front">
+                  <!-- 9c27b0 -->
+                <img src="http://placehold.it/110x110/005173/fff?text={{user?.firstName}}" class="img-fluid" />
+                <h3>{{user?.firstName}} {{user?.lastName}}</h3>
+                <p>Fullstack Developer</p>
               </div>
-              <ul class="mt-4">
-                <li>First Name: <b>{{user.firstName}}</b></li>
-                <li>Last Name: <b>{{user.lastName}}</b></li>
-                <li>email Address: <b>{{user.email}}</b></li>
-              </ul>
-            </div>
 
+              <div class="team-back">
+                <div *ngIf="user?.firstName !== 'Anonymous'">
+                  <i (click)="editUser(user);" class="fa fa-edit pull-right"></i>
+                </div>
+                <ul class="mt-4">
+                  <li>First Name: <b>{{user?.firstName}}</b></li>
+                  <li>Last Name: <b>{{user?.lastName}}</b></li>
+                  <li>email Address: <b>{{user?.email}}</b></li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </div>
         <!--team-1-->
